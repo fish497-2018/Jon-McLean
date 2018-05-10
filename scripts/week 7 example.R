@@ -13,3 +13,9 @@ library(tidyverse)
 #Creates a scatterplot of length and scale length, then groups by lake id
 ggplot(fish_data_cat, aes(length, scalelength, color = lakeid)) +
          geom_point()
+
+
+
+#Plot histogram of scale length by fish categorical size
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
